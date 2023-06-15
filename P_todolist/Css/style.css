@@ -1,0 +1,238 @@
+:root{
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+  'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+  'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace,;
+  --transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
+
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Fira sans', sans-serif;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--font-mono);
+  background: rgb(53, 0, 102);
+  color: #fff;
+}
+header{
+  padding: 1rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+#logout{
+  cursor: pointer;
+  margin: 0 0rem 2rem -20rem;
+  font-size: 1.125rem;
+  font-weight: 900;
+  transition: 0.4s;
+  color: lightgray;
+  border-radius: 0.25rem;
+  padding-bottom: 0.5rem;
+}
+header h1{
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: rgb(197, 159, 255);
+  margin-bottom: 1rem;
+}
+#new-task-form{
+  display: flex;
+}
+input,button{
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+#new-task-input{
+  flex:1 1 0%;
+  background-color: rgb(69, 10, 78); 
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  color: lightgrey;
+  font-size: 1.25rem;
+}
+#new-task-input::placeholder {
+  color: #994bc9;
+}
+#new-task-submit{
+  color: blue;
+  font-size: 1.25rem;
+  font-weight:700;
+  background-image: linear-gradient(to right, rgb(160, 80, 209), purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  transition: 0.4s;
+}
+#new-task-submit:hover{
+  opacity: 0.8;
+}
+#new-task-submit:active{
+  opacity: 0.6;
+}
+main{
+  flex: 1 1 0%;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+.task-list{
+  padding: 1rem;
+
+}
+.task-list h2{
+  font-size: 3rem;
+  font-weight: 300;
+  color: rgb(114, 107, 255);
+  margin-bottom: 1rem;
+}
+#tasks .task{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(38, 13, 52);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+#tasks .task .content .text {
+  color: lightgray;
+  font-size: 1.125rem;
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+}
+#tasks .task .content .text:not(:read-only){
+  color:rgb(249, 132, 251);
+}
+#tasks .task .actions {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+
+.task .actions button {
+cursor: pointer;
+margin: 0 0.5rem;
+transition: 0.45;
+font-size: 1.125rem;
+font-weight: 700;
+text-transform: uppercase;
+transition: 0.4s;
+}
+
+.task .actions button:hover{
+  opacity: 0.8;
+}
+.task .actions button:active{
+  opacity: 0.6;
+}
+.edit{
+
+  background-image: linear-gradient(to right, rgb(175, 80, 209), rgb(80, 0, 201));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.delete{
+  color: rgb(167, 0, 0);
+}
+.done{
+  color: green;
+}
+
+
+.login {
+    display:flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+  }
+.signup{
+  display:flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+}
+
+section h1{
+  font-size: 3em;
+  margin: 0 auto;
+}
+
+section h2{
+  text-align:center;
+  width: 100%;
+  margin-bottom: 1em;
+  font-size: 2.5em;
+  color: #fff;
+}
+
+section form{
+  padding: 1.5em;
+  display:flex;
+  flex-wrap: wrap;
+  max-width: 500px;
+  border-radius: 20px;
+  border: 3px solid rgba(0,0,0,.1);
+  background-color: rgb(54, 13, 98);
+}
+
+section form label{
+  width: 100%;
+  padding: 0.2em;
+  margin-bottom: 0.5em;
+  background-color: rgb(54, 13, 98);
+  color: #fff;
+}
+
+section form input{
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 1em;
+  border-radius: 9px;
+  border: none;
+  outline-color: #6e258e;
+  background-color: rgb(185, 135, 255);
+}
+
+section form input[type='submit']{
+  margin-top: 1.5em;
+  background-color:rgba(162, 107, 213, 0.993);
+  color: #fff;
+  font-family: var(--font-mono);
+  transition: var(--transition);
+} 
+
+section form input[type='submit']:active{
+  transform: scale(0.97);
+}
+
+section p{
+  margin-top: 1.5em;
+
+}
+
+
+section p a{
+  text-decoration: none;
+  color:rgb(201, 163, 254);
+}
+
